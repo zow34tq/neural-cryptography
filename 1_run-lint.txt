@@ -1,0 +1,962 @@
+2022-11-11T21:27:45.2321523Z Requested labels: ubuntu-latest
+2022-11-11T21:27:45.2321568Z Job defined at: dotnet/core/.github/workflows/super-linter.yml@refs/pull/7960/merge
+2022-11-11T21:27:45.2321589Z Waiting for a runner to pick up this job...
+2022-11-11T21:27:45.6936046Z Job is waiting for a hosted runner to come online.
+2022-11-11T21:27:48.7451018Z Job is about to start running on the hosted runner: Hosted Agent (hosted)
+2022-11-11T21:27:51.4066234Z Current runner version: '2.299.1'
+2022-11-11T21:27:51.4097238Z ##[group]Operating System
+2022-11-11T21:27:51.4097926Z Ubuntu
+2022-11-11T21:27:51.4098203Z 20.04.5
+2022-11-11T21:27:51.4098630Z LTS
+2022-11-11T21:27:51.4098971Z ##[endgroup]
+2022-11-11T21:27:51.4099274Z ##[group]Runner Image
+2022-11-11T21:27:51.4099691Z Image: ubuntu-20.04
+2022-11-11T21:27:51.4100101Z Version: 20221027.1
+2022-11-11T21:27:51.4100624Z Included Software: https://github.com/actions/runner-images/blob/ubuntu20/20221027.1/images/linux/Ubuntu2004-Readme.md
+2022-11-11T21:27:51.4101335Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu20%2F20221027.1
+2022-11-11T21:27:51.4101867Z ##[endgroup]
+2022-11-11T21:27:51.4102252Z ##[group]Runner Image Provisioner
+2022-11-11T21:27:51.4102623Z 2.0.91.1
+2022-11-11T21:27:51.4102957Z ##[endgroup]
+2022-11-11T21:27:51.4103648Z ##[group]GITHUB_TOKEN Permissions
+2022-11-11T21:27:51.4104284Z Contents: read
+2022-11-11T21:27:51.4104717Z Metadata: read
+2022-11-11T21:27:51.4105271Z ##[endgroup]
+2022-11-11T21:27:51.4109756Z Secret source: Actions
+2022-11-11T21:27:51.4110353Z Prepare workflow directory
+2022-11-11T21:27:51.5254074Z Prepare all required actions
+2022-11-11T21:27:51.5529051Z Getting action download info
+2022-11-11T21:27:52.0694938Z Download action repository 'actions/checkout@v2' (SHA:e2f20e631ae6d7dd3b768f56a5d2af784dd54791)
+2022-11-11T21:27:52.7208915Z Download action repository 'github/super-linter@v4' (SHA:bb2d833b08b6c288608686672b93a8a4589cdc49)
+2022-11-11T21:27:53.6411983Z ##[group]Pull down action image 'ghcr.io/github/super-linter:v4.9.7'
+2022-11-11T21:27:53.6498410Z ##[command]/usr/bin/docker pull ghcr.io/github/super-linter:v4.9.7
+2022-11-11T21:27:54.6256852Z v4.9.7: Pulling from github/super-linter
+2022-11-11T21:27:54.6258338Z df9b9388f04a: Already exists
+2022-11-11T21:27:54.6281921Z 43aa359f86af: Pulling fs layer
+2022-11-11T21:27:54.6282348Z b79dd6f369ce: Pulling fs layer
+2022-11-11T21:27:54.6282611Z c25f21e224f7: Pulling fs layer
+2022-11-11T21:27:54.6282847Z 54b59fb876fa: Pulling fs layer
+2022-11-11T21:27:54.6283111Z c476a72a7723: Pulling fs layer
+2022-11-11T21:27:54.6283370Z 8b1579868f4a: Pulling fs layer
+2022-11-11T21:27:54.6283606Z 1854c17c90ed: Pulling fs layer
+2022-11-11T21:27:54.6283859Z 051ee10fb545: Pulling fs layer
+2022-11-11T21:27:54.6284124Z ac39ffb9d84d: Pulling fs layer
+2022-11-11T21:27:54.6284362Z 5a6135453d87: Pulling fs layer
+2022-11-11T21:27:54.6284607Z 0ae9c13d9a58: Pulling fs layer
+2022-11-11T21:27:54.6284911Z 2ed4d29a0d55: Pulling fs layer
+2022-11-11T21:27:54.6285145Z 375ef76864f0: Pulling fs layer
+2022-11-11T21:27:54.6285387Z 2573e9bfac90: Pulling fs layer
+2022-11-11T21:27:54.6285632Z 1a98a6250c0c: Pulling fs layer
+2022-11-11T21:27:54.6285874Z 8e7a183768e9: Pulling fs layer
+2022-11-11T21:27:54.6286119Z cb8f60c0e3c2: Pulling fs layer
+2022-11-11T21:27:54.6286386Z da1ce3350920: Pulling fs layer
+2022-11-11T21:27:54.6286623Z 2aa4ba117dac: Pulling fs layer
+2022-11-11T21:27:54.6287657Z a77ef41cbffb: Pulling fs layer
+2022-11-11T21:27:54.6288088Z 9e95193ee06a: Pulling fs layer
+2022-11-11T21:27:54.6288340Z db32ee77de60: Pulling fs layer
+2022-11-11T21:27:54.6288576Z 54b59fb876fa: Waiting
+2022-11-11T21:27:54.6288848Z fd9e5edc14d1: Pulling fs layer
+2022-11-11T21:27:54.6289125Z 0b24ac38268c: Pulling fs layer
+2022-11-11T21:27:54.6289369Z c8bc92fa7293: Pulling fs layer
+2022-11-11T21:27:54.6289618Z 617e538e317d: Pulling fs layer
+2022-11-11T21:27:54.6289946Z 077337b92c66: Pulling fs layer
+2022-11-11T21:27:54.6290178Z 0ae9c13d9a58: Waiting
+2022-11-11T21:27:54.6290404Z 2ed4d29a0d55: Waiting
+2022-11-11T21:27:54.6290609Z 375ef76864f0: Waiting
+2022-11-11T21:27:54.6290963Z 2573e9bfac90: Waiting
+2022-11-11T21:27:54.6291185Z 1a98a6250c0c: Waiting
+2022-11-11T21:27:54.6291397Z 8e7a183768e9: Waiting
+2022-11-11T21:27:54.6291597Z cb8f60c0e3c2: Waiting
+2022-11-11T21:27:54.6291816Z da1ce3350920: Waiting
+2022-11-11T21:27:54.6292033Z 2aa4ba117dac: Waiting
+2022-11-11T21:27:54.6292241Z a77ef41cbffb: Waiting
+2022-11-11T21:27:54.6292461Z 9e95193ee06a: Waiting
+2022-11-11T21:27:54.6292675Z db32ee77de60: Waiting
+2022-11-11T21:27:54.6293195Z fd9e5edc14d1: Waiting
+2022-11-11T21:27:54.6293416Z 0b24ac38268c: Waiting
+2022-11-11T21:27:54.6293631Z c8bc92fa7293: Waiting
+2022-11-11T21:27:54.6293830Z 617e538e317d: Waiting
+2022-11-11T21:27:54.6294042Z 077337b92c66: Waiting
+2022-11-11T21:27:54.6294253Z 051ee10fb545: Waiting
+2022-11-11T21:27:54.6294452Z c476a72a7723: Waiting
+2022-11-11T21:27:54.6294928Z 8b1579868f4a: Waiting
+2022-11-11T21:27:54.6295163Z ac39ffb9d84d: Waiting
+2022-11-11T21:27:54.6295367Z 5a6135453d87: Waiting
+2022-11-11T21:27:54.6295578Z 1854c17c90ed: Waiting
+2022-11-11T21:27:54.9472302Z 43aa359f86af: Verifying Checksum
+2022-11-11T21:27:54.9485186Z 43aa359f86af: Download complete
+2022-11-11T21:27:55.2572227Z b79dd6f369ce: Verifying Checksum
+2022-11-11T21:27:55.2573495Z b79dd6f369ce: Download complete
+2022-11-11T21:27:55.2648347Z 54b59fb876fa: Verifying Checksum
+2022-11-11T21:27:55.2652461Z 54b59fb876fa: Download complete
+2022-11-11T21:27:55.2998023Z 43aa359f86af: Pull complete
+2022-11-11T21:27:55.6238220Z 8b1579868f4a: Verifying Checksum
+2022-11-11T21:27:55.6243478Z 8b1579868f4a: Download complete
+2022-11-11T21:27:55.6775936Z c476a72a7723: Verifying Checksum
+2022-11-11T21:27:55.6780631Z c476a72a7723: Download complete
+2022-11-11T21:27:55.9995097Z 1854c17c90ed: Verifying Checksum
+2022-11-11T21:27:55.9995908Z 1854c17c90ed: Download complete
+2022-11-11T21:27:56.6191868Z ac39ffb9d84d: Verifying Checksum
+2022-11-11T21:27:56.6192960Z ac39ffb9d84d: Download complete
+2022-11-11T21:27:57.0848778Z 5a6135453d87: Verifying Checksum
+2022-11-11T21:27:57.0853857Z 5a6135453d87: Download complete
+2022-11-11T21:27:57.4647609Z 0ae9c13d9a58: Verifying Checksum
+2022-11-11T21:27:57.4651445Z 0ae9c13d9a58: Download complete
+2022-11-11T21:27:57.8576783Z 2ed4d29a0d55: Verifying Checksum
+2022-11-11T21:27:57.8581971Z 2ed4d29a0d55: Download complete
+2022-11-11T21:27:59.0706070Z 375ef76864f0: Verifying Checksum
+2022-11-11T21:27:59.0709930Z 375ef76864f0: Download complete
+2022-11-11T21:27:59.6541855Z 2573e9bfac90: Verifying Checksum
+2022-11-11T21:27:59.6547871Z 2573e9bfac90: Download complete
+2022-11-11T21:27:59.8023987Z c25f21e224f7: Verifying Checksum
+2022-11-11T21:27:59.8035608Z c25f21e224f7: Download complete
+2022-11-11T21:28:00.1515172Z 1a98a6250c0c: Verifying Checksum
+2022-11-11T21:28:00.1516029Z 1a98a6250c0c: Download complete
+2022-11-11T21:28:00.6288701Z cb8f60c0e3c2: Verifying Checksum
+2022-11-11T21:28:00.6292159Z cb8f60c0e3c2: Download complete
+2022-11-11T21:28:00.9411250Z da1ce3350920: Verifying Checksum
+2022-11-11T21:28:00.9423295Z da1ce3350920: Download complete
+2022-11-11T21:28:01.3122195Z 2aa4ba117dac: Verifying Checksum
+2022-11-11T21:28:01.3125406Z 2aa4ba117dac: Download complete
+2022-11-11T21:28:01.8008454Z 051ee10fb545: Verifying Checksum
+2022-11-11T21:28:01.8009240Z 051ee10fb545: Download complete
+2022-11-11T21:28:01.8207149Z 8e7a183768e9: Verifying Checksum
+2022-11-11T21:28:01.8207864Z 8e7a183768e9: Download complete
+2022-11-11T21:28:02.0477577Z 9e95193ee06a: Verifying Checksum
+2022-11-11T21:28:02.0478351Z 9e95193ee06a: Download complete
+2022-11-11T21:28:02.0662507Z a77ef41cbffb: Verifying Checksum
+2022-11-11T21:28:02.0668446Z a77ef41cbffb: Download complete
+2022-11-11T21:28:02.0947732Z db32ee77de60: Verifying Checksum
+2022-11-11T21:28:02.0948630Z db32ee77de60: Download complete
+2022-11-11T21:28:03.3225379Z c8bc92fa7293: Verifying Checksum
+2022-11-11T21:28:03.3226175Z c8bc92fa7293: Download complete
+2022-11-11T21:28:03.7076800Z 617e538e317d: Verifying Checksum
+2022-11-11T21:28:03.7077438Z 617e538e317d: Download complete
+2022-11-11T21:28:04.0867656Z 077337b92c66: Verifying Checksum
+2022-11-11T21:28:04.0868200Z 077337b92c66: Download complete
+2022-11-11T21:28:04.6746796Z fd9e5edc14d1: Verifying Checksum
+2022-11-11T21:28:04.6747960Z fd9e5edc14d1: Download complete
+2022-11-11T21:28:04.9720880Z 0b24ac38268c: Verifying Checksum
+2022-11-11T21:28:04.9721249Z 0b24ac38268c: Download complete
+2022-11-11T21:28:07.5213296Z b79dd6f369ce: Pull complete
+2022-11-11T21:28:19.6498098Z c25f21e224f7: Pull complete
+2022-11-11T21:28:19.8104368Z 54b59fb876fa: Pull complete
+2022-11-11T21:28:21.2274475Z c476a72a7723: Pull complete
+2022-11-11T21:28:21.8688607Z 8b1579868f4a: Pull complete
+2022-11-11T21:28:21.9668209Z 1854c17c90ed: Pull complete
+2022-11-11T21:28:43.6549314Z 051ee10fb545: Pull complete
+2022-11-11T21:28:45.5491550Z ac39ffb9d84d: Pull complete
+2022-11-11T21:28:46.9187765Z 5a6135453d87: Pull complete
+2022-11-11T21:28:47.0658347Z 0ae9c13d9a58: Pull complete
+2022-11-11T21:28:47.1841832Z 2ed4d29a0d55: Pull complete
+2022-11-11T21:28:58.4058545Z 375ef76864f0: Pull complete
+2022-11-11T21:28:59.0125678Z 2573e9bfac90: Pull complete
+2022-11-11T21:28:59.7887906Z 1a98a6250c0c: Pull complete
+2022-11-11T21:29:14.1649211Z 8e7a183768e9: Pull complete
+2022-11-11T21:29:14.2868133Z cb8f60c0e3c2: Pull complete
+2022-11-11T21:29:14.3530331Z da1ce3350920: Pull complete
+2022-11-11T21:29:14.4297218Z 2aa4ba117dac: Pull complete
+2022-11-11T21:29:15.7627597Z a77ef41cbffb: Pull complete
+2022-11-11T21:29:15.9601452Z 9e95193ee06a: Pull complete
+2022-11-11T21:29:16.0711277Z db32ee77de60: Pull complete
+2022-11-11T21:29:24.3528452Z fd9e5edc14d1: Pull complete
+2022-11-11T21:29:44.8174029Z 0b24ac38268c: Pull complete
+2022-11-11T21:29:51.3130590Z c8bc92fa7293: Pull complete
+2022-11-11T21:29:51.6106996Z 617e538e317d: Pull complete
+2022-11-11T21:29:51.6852968Z 077337b92c66: Pull complete
+2022-11-11T21:29:51.6920987Z Digest: sha256:458d8749baa2da3ef814dfc04832fca41446f6e01d7b5d6ce3c67ff0ef5ed337
+2022-11-11T21:29:51.6948893Z Status: Downloaded newer image for ghcr.io/github/super-linter:v4.9.7
+2022-11-11T21:29:51.6980586Z ghcr.io/github/super-linter:v4.9.7
+2022-11-11T21:29:51.7006902Z ##[endgroup]
+2022-11-11T21:29:51.7563567Z ##[group]Run actions/checkout@v2
+2022-11-11T21:29:51.7563949Z with:
+2022-11-11T21:29:51.7564269Z   fetch-depth: 0
+2022-11-11T21:29:51.7564714Z   repository: dotnet/core
+2022-11-11T21:29:51.7565336Z   token: ***
+2022-11-11T21:29:51.7565593Z   ssh-strict: true
+2022-11-11T21:29:51.7565920Z   persist-credentials: true
+2022-11-11T21:29:51.7566261Z   clean: true
+2022-11-11T21:29:51.7566568Z   lfs: false
+2022-11-11T21:29:51.7566866Z   submodules: false
+2022-11-11T21:29:51.7567196Z   set-safe-directory: true
+2022-11-11T21:29:51.7690351Z ##[endgroup]
+2022-11-11T21:29:52.1337082Z Syncing repository: dotnet/core
+2022-11-11T21:29:52.1339139Z ##[group]Getting Git version info
+2022-11-11T21:29:52.1340686Z Working directory is '/home/runner/work/core/core'
+2022-11-11T21:29:52.1341250Z [command]/usr/bin/git version
+2022-11-11T21:29:52.1477687Z git version 2.38.1
+2022-11-11T21:29:52.1510656Z ##[endgroup]
+2022-11-11T21:29:52.1537611Z Temporarily overriding HOME='/home/runner/work/_temp/7ce7bb97-983d-480d-8194-bc08d1324ee9' before making global git config changes
+2022-11-11T21:29:52.1538132Z Adding repository directory to the temporary git global config as a safe directory
+2022-11-11T21:29:52.1538707Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/core/core
+2022-11-11T21:29:52.1592111Z Deleting the contents of '/home/runner/work/core/core'
+2022-11-11T21:29:52.1597791Z ##[group]Initializing the repository
+2022-11-11T21:29:52.1602344Z [command]/usr/bin/git init /home/runner/work/core/core
+2022-11-11T21:29:52.1699885Z hint: Using 'master' as the name for the initial branch. This default branch name
+2022-11-11T21:29:52.1700828Z hint: is subject to change. To configure the initial branch name to use in all
+2022-11-11T21:29:52.1701634Z hint: of your new repositories, which will suppress this warning, call:
+2022-11-11T21:29:52.1701984Z hint: 
+2022-11-11T21:29:52.1702484Z hint: 	git config --global init.defaultBranch <name>
+2022-11-11T21:29:52.1702757Z hint: 
+2022-11-11T21:29:52.1703501Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2022-11-11T21:29:52.1704017Z hint: 'development'. The just-created branch can be renamed via this command:
+2022-11-11T21:29:52.1704354Z hint: 
+2022-11-11T21:29:52.1704623Z hint: 	git branch -m <name>
+2022-11-11T21:29:52.1715112Z Initialized empty Git repository in /home/runner/work/core/core/.git/
+2022-11-11T21:29:52.1728336Z [command]/usr/bin/git remote add origin https://github.com/dotnet/core
+2022-11-11T21:29:52.1783424Z ##[endgroup]
+2022-11-11T21:29:52.1784320Z ##[group]Disabling automatic garbage collection
+2022-11-11T21:29:52.1790896Z [command]/usr/bin/git config --local gc.auto 0
+2022-11-11T21:29:52.1828982Z ##[endgroup]
+2022-11-11T21:29:52.1829849Z ##[group]Setting up auth
+2022-11-11T21:29:52.1843498Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-11-11T21:29:52.1887223Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-11-11T21:29:52.2346605Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-11-11T21:29:52.2389671Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-11-11T21:29:52.2699784Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2022-11-11T21:29:52.2760484Z ##[endgroup]
+2022-11-11T21:29:52.2761334Z ##[group]Fetching the repository
+2022-11-11T21:29:52.2774387Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +6f299f820eff03689e1cb3c34e9bfb7c5c9f2973:refs/remotes/pull/7960/merge
+2022-11-11T21:29:52.8710058Z remote: Enumerating objects: 22569, done.        
+2022-11-11T21:29:52.8710993Z remote: Counting objects:   0% (1/253)        
+2022-11-11T21:29:52.8711332Z remote: Counting objects:   1% (3/253)        
+2022-11-11T21:29:52.8711767Z remote: Counting objects:   2% (6/253)        
+2022-11-11T21:29:52.8712051Z remote: Counting objects:   3% (8/253)        
+2022-11-11T21:29:52.8712347Z remote: Counting objects:   4% (11/253)        
+2022-11-11T21:29:52.8712660Z remote: Counting objects:   5% (13/253)        
+2022-11-11T21:29:52.8712939Z remote: Counting objects:   6% (16/253)        
+2022-11-11T21:29:52.8713242Z remote: Counting objects:   7% (18/253)        
+2022-11-11T21:29:52.8713527Z remote: Counting objects:   8% (21/253)        
+2022-11-11T21:29:52.8713819Z remote: Counting objects:   9% (23/253)        
+2022-11-11T21:29:52.8714093Z remote: Counting objects:  10% (26/253)        
+2022-11-11T21:29:52.8714378Z remote: Counting objects:  11% (28/253)        
+2022-11-11T21:29:52.8714682Z remote: Counting objects:  12% (31/253)        
+2022-11-11T21:29:52.8718179Z remote: Counting objects:  13% (33/253)        
+2022-11-11T21:29:52.8718474Z remote: Counting objects:  14% (36/253)        
+2022-11-11T21:29:52.8718763Z remote: Counting objects:  15% (38/253)        
+2022-11-11T21:29:52.8719056Z remote: Counting objects:  16% (41/253)        
+2022-11-11T21:29:52.8719331Z remote: Counting objects:  17% (44/253)        
+2022-11-11T21:29:52.8719627Z remote: Counting objects:  18% (46/253)        
+2022-11-11T21:29:52.8719918Z remote: Counting objects:  19% (49/253)        
+2022-11-11T21:29:52.8720206Z remote: Counting objects:  20% (51/253)        
+2022-11-11T21:29:52.8720482Z remote: Counting objects:  21% (54/253)        
+2022-11-11T21:29:52.8720768Z remote: Counting objects:  22% (56/253)        
+2022-11-11T21:29:52.8721054Z remote: Counting objects:  23% (59/253)        
+2022-11-11T21:29:52.8721331Z remote: Counting objects:  24% (61/253)        
+2022-11-11T21:29:52.8721614Z remote: Counting objects:  25% (64/253)        
+2022-11-11T21:29:52.8722066Z remote: Counting objects:  26% (66/253)        
+2022-11-11T21:29:52.8722346Z remote: Counting objects:  27% (69/253)        
+2022-11-11T21:29:52.8722631Z remote: Counting objects:  28% (71/253)        
+2022-11-11T21:29:52.8722918Z remote: Counting objects:  29% (74/253)        
+2022-11-11T21:29:52.8723188Z remote: Counting objects:  30% (76/253)        
+2022-11-11T21:29:52.8723478Z remote: Counting objects:  31% (79/253)        
+2022-11-11T21:29:52.8723981Z remote: Counting objects:  32% (81/253)        
+2022-11-11T21:29:52.8724268Z remote: Counting objects:  33% (84/253)        
+2022-11-11T21:29:52.8724542Z remote: Counting objects:  34% (87/253)        
+2022-11-11T21:29:52.8724826Z remote: Counting objects:  35% (89/253)        
+2022-11-11T21:29:52.8725112Z remote: Counting objects:  36% (92/253)        
+2022-11-11T21:29:52.8725384Z remote: Counting objects:  37% (94/253)        
+2022-11-11T21:29:52.8725666Z remote: Counting objects:  38% (97/253)        
+2022-11-11T21:29:52.8725952Z remote: Counting objects:  39% (99/253)        
+2022-11-11T21:29:52.8726235Z remote: Counting objects:  40% (102/253)        
+2022-11-11T21:29:52.8726532Z remote: Counting objects:  41% (104/253)        
+2022-11-11T21:29:52.8726827Z remote: Counting objects:  42% (107/253)        
+2022-11-11T21:29:52.8727109Z remote: Counting objects:  43% (109/253)        
+2022-11-11T21:29:52.8727405Z remote: Counting objects:  44% (112/253)        
+2022-11-11T21:29:52.8727700Z remote: Counting objects:  45% (114/253)        
+2022-11-11T21:29:52.8727988Z remote: Counting objects:  46% (117/253)        
+2022-11-11T21:29:52.8728264Z remote: Counting objects:  47% (119/253)        
+2022-11-11T21:29:52.8729654Z remote: Counting objects:  48% (122/253)        
+2022-11-11T21:29:52.8729956Z remote: Counting objects:  49% (124/253)        
+2022-11-11T21:29:52.8730237Z remote: Counting objects:  50% (127/253)        
+2022-11-11T21:29:52.8730530Z remote: Counting objects:  51% (130/253)        
+2022-11-11T21:29:52.8730825Z remote: Counting objects:  52% (132/253)        
+2022-11-11T21:29:52.8731274Z remote: Counting objects:  53% (135/253)        
+2022-11-11T21:29:52.8731588Z remote: Counting objects:  54% (137/253)        
+2022-11-11T21:29:52.8731880Z remote: Counting objects:  55% (140/253)        
+2022-11-11T21:29:52.8732157Z remote: Counting objects:  56% (142/253)        
+2022-11-11T21:29:52.8732771Z remote: Counting objects:  57% (145/253)        
+2022-11-11T21:29:52.8733075Z remote: Counting objects:  58% (147/253)        
+2022-11-11T21:29:52.8734174Z remote: Counting objects:  59% (150/253)        
+2022-11-11T21:29:52.8734453Z remote: Counting objects:  60% (152/253)        
+2022-11-11T21:29:52.8734940Z remote: Counting objects:  61% (155/253)        
+2022-11-11T21:29:52.8735234Z remote: Counting objects:  62% (157/253)        
+2022-11-11T21:29:52.8735509Z remote: Counting objects:  63% (160/253)        
+2022-11-11T21:29:52.8736625Z remote: Counting objects:  64% (162/253)        
+2022-11-11T21:29:52.8737370Z remote: Counting objects:  65% (165/253)        
+2022-11-11T21:29:52.8738100Z remote: Counting objects:  66% (167/253)        
+2022-11-11T21:29:52.8738453Z remote: Counting objects:  67% (170/253)        
+2022-11-11T21:29:52.8738744Z remote: Counting objects:  68% (173/253)        
+2022-11-11T21:29:52.8739029Z remote: Counting objects:  69% (175/253)        
+2022-11-11T21:29:52.8739302Z remote: Counting objects:  70% (178/253)        
+2022-11-11T21:29:52.8739593Z remote: Counting objects:  71% (180/253)        
+2022-11-11T21:29:52.8739888Z remote: Counting objects:  72% (183/253)        
+2022-11-11T21:29:52.8740175Z remote: Counting objects:  73% (185/253)        
+2022-11-11T21:29:52.8740447Z remote: Counting objects:  74% (188/253)        
+2022-11-11T21:29:52.8740733Z remote: Counting objects:  75% (190/253)        
+2022-11-11T21:29:52.8741019Z remote: Counting objects:  76% (193/253)        
+2022-11-11T21:29:52.8741291Z remote: Counting objects:  77% (195/253)        
+2022-11-11T21:29:52.8742058Z remote: Counting objects:  78% (198/253)        
+2022-11-11T21:29:52.8742365Z remote: Counting objects:  79% (200/253)        
+2022-11-11T21:29:52.8742639Z remote: Counting objects:  80% (203/253)        
+2022-11-11T21:29:52.8742924Z remote: Counting objects:  81% (205/253)        
+2022-11-11T21:29:52.8746025Z remote: Counting objects:  82% (208/253)        
+2022-11-11T21:29:52.8746352Z remote: Counting objects:  83% (210/253)        
+2022-11-11T21:29:52.8746635Z remote: Counting objects:  84% (213/253)        
+2022-11-11T21:29:52.8747112Z remote: Counting objects:  85% (216/253)        
+2022-11-11T21:29:52.8747442Z remote: Counting objects:  86% (218/253)        
+2022-11-11T21:29:52.8747719Z remote: Counting objects:  87% (221/253)        
+2022-11-11T21:29:52.8748006Z remote: Counting objects:  88% (223/253)        
+2022-11-11T21:29:52.8748295Z remote: Counting objects:  89% (226/253)        
+2022-11-11T21:29:52.8748571Z remote: Counting objects:  90% (228/253)        
+2022-11-11T21:29:52.8748861Z remote: Counting objects:  91% (231/253)        
+2022-11-11T21:29:52.8749157Z remote: Counting objects:  92% (233/253)        
+2022-11-11T21:29:52.8749448Z remote: Counting objects:  93% (236/253)        
+2022-11-11T21:29:52.8749723Z remote: Counting objects:  94% (238/253)        
+2022-11-11T21:29:52.8750007Z remote: Counting objects:  95% (241/253)        
+2022-11-11T21:29:52.8750292Z remote: Counting objects:  96% (243/253)        
+2022-11-11T21:29:52.8750563Z remote: Counting objects:  97% (246/253)        
+2022-11-11T21:29:52.8750849Z remote: Counting objects:  98% (248/253)        
+2022-11-11T21:29:52.8751137Z remote: Counting objects:  99% (251/253)        
+2022-11-11T21:29:52.8751408Z remote: Counting objects: 100% (253/253)        
+2022-11-11T21:29:52.8751709Z remote: Counting objects: 100% (253/253), done.        
+2022-11-11T21:29:52.8752036Z remote: Compressing objects:   0% (1/128)        
+2022-11-11T21:29:52.8752363Z remote: Compressing objects:   1% (2/128)        
+2022-11-11T21:29:52.8752655Z remote: Compressing objects:   2% (3/128)        
+2022-11-11T21:29:52.8753055Z remote: Compressing objects:   3% (4/128)        
+2022-11-11T21:29:52.8753380Z remote: Compressing objects:   4% (6/128)        
+2022-11-11T21:29:52.8753665Z remote: Compressing objects:   5% (7/128)        
+2022-11-11T21:29:52.8753968Z remote: Compressing objects:   6% (8/128)        
+2022-11-11T21:29:52.8754267Z remote: Compressing objects:   7% (9/128)        
+2022-11-11T21:29:52.8754556Z remote: Compressing objects:   8% (11/128)        
+2022-11-11T21:29:52.8754871Z remote: Compressing objects:   9% (12/128)        
+2022-11-11T21:29:52.8755180Z remote: Compressing objects:  10% (13/128)        
+2022-11-11T21:29:52.8886473Z remote: Compressing objects:  11% (15/128)        
+2022-11-11T21:29:52.8886844Z remote: Compressing objects:  12% (16/128)        
+2022-11-11T21:29:52.8887160Z remote: Compressing objects:  13% (17/128)        
+2022-11-11T21:29:52.8887474Z remote: Compressing objects:  14% (18/128)        
+2022-11-11T21:29:52.8887768Z remote: Compressing objects:  15% (20/128)        
+2022-11-11T21:29:52.8888092Z remote: Compressing objects:  16% (21/128)        
+2022-11-11T21:29:52.8888398Z remote: Compressing objects:  17% (22/128)        
+2022-11-11T21:29:52.8888689Z remote: Compressing objects:  18% (24/128)        
+2022-11-11T21:29:52.8888997Z remote: Compressing objects:  19% (25/128)        
+2022-11-11T21:29:52.8889302Z remote: Compressing objects:  20% (26/128)        
+2022-11-11T21:29:52.8889607Z remote: Compressing objects:  21% (27/128)        
+2022-11-11T21:29:52.8891269Z remote: Compressing objects:  22% (29/128)        
+2022-11-11T21:29:52.8891632Z remote: Compressing objects:  23% (30/128)        
+2022-11-11T21:29:52.8891937Z remote: Compressing objects:  24% (31/128)        
+2022-11-11T21:29:52.8892512Z remote: Compressing objects:  25% (32/128)        
+2022-11-11T21:29:52.8892853Z remote: Compressing objects:  26% (34/128)        
+2022-11-11T21:29:52.8893159Z remote: Compressing objects:  27% (35/128)        
+2022-11-11T21:29:52.8893463Z remote: Compressing objects:  28% (36/128)        
+2022-11-11T21:29:52.8893890Z remote: Compressing objects:  29% (38/128)        
+2022-11-11T21:29:52.8894325Z remote: Compressing objects:  30% (39/128)        
+2022-11-11T21:29:52.8894914Z remote: Compressing objects:  31% (40/128)        
+2022-11-11T21:29:52.8902115Z remote: Compressing objects:  32% (41/128)        
+2022-11-11T21:29:52.8903698Z remote: Compressing objects:  33% (43/128)        
+2022-11-11T21:29:52.8904472Z remote: Compressing objects:  34% (44/128)        
+2022-11-11T21:29:52.8904785Z remote: Compressing objects:  35% (45/128)        
+2022-11-11T21:29:52.8905076Z remote: Compressing objects:  36% (47/128)        
+2022-11-11T21:29:52.8905384Z remote: Compressing objects:  37% (48/128)        
+2022-11-11T21:29:52.8905691Z remote: Compressing objects:  38% (49/128)        
+2022-11-11T21:29:52.8905980Z remote: Compressing objects:  39% (50/128)        
+2022-11-11T21:29:52.8906285Z remote: Compressing objects:  40% (52/128)        
+2022-11-11T21:29:52.8906587Z remote: Compressing objects:  41% (53/128)        
+2022-11-11T21:29:52.8906899Z remote: Compressing objects:  42% (54/128)        
+2022-11-11T21:29:52.8907191Z remote: Compressing objects:  43% (56/128)        
+2022-11-11T21:29:52.8907493Z remote: Compressing objects:  44% (57/128)        
+2022-11-11T21:29:52.8907795Z remote: Compressing objects:  45% (58/128)        
+2022-11-11T21:29:52.8908080Z remote: Compressing objects:  46% (59/128)        
+2022-11-11T21:29:52.8908390Z remote: Compressing objects:  47% (61/128)        
+2022-11-11T21:29:52.8908749Z remote: Compressing objects:  48% (62/128)        
+2022-11-11T21:29:52.8909037Z remote: Compressing objects:  49% (63/128)        
+2022-11-11T21:29:52.8909342Z remote: Compressing objects:  50% (64/128)        
+2022-11-11T21:29:52.8909640Z remote: Compressing objects:  51% (66/128)        
+2022-11-11T21:29:52.8909938Z remote: Compressing objects:  52% (67/128)        
+2022-11-11T21:29:52.8910224Z remote: Compressing objects:  53% (68/128)        
+2022-11-11T21:29:52.8910638Z remote: Compressing objects:  54% (70/128)        
+2022-11-11T21:29:52.8910961Z remote: Compressing objects:  55% (71/128)        
+2022-11-11T21:29:52.8911248Z remote: Compressing objects:  56% (72/128)        
+2022-11-11T21:29:52.8911546Z remote: Compressing objects:  57% (73/128)        
+2022-11-11T21:29:52.8911848Z remote: Compressing objects:  58% (75/128)        
+2022-11-11T21:29:52.8912133Z remote: Compressing objects:  59% (76/128)        
+2022-11-11T21:29:52.8912437Z remote: Compressing objects:  60% (77/128)        
+2022-11-11T21:29:52.8912736Z remote: Compressing objects:  61% (79/128)        
+2022-11-11T21:29:52.8913024Z remote: Compressing objects:  62% (80/128)        
+2022-11-11T21:29:52.8913323Z remote: Compressing objects:  63% (81/128)        
+2022-11-11T21:29:52.8913621Z remote: Compressing objects:  64% (82/128)        
+2022-11-11T21:29:52.8913921Z remote: Compressing objects:  65% (84/128)        
+2022-11-11T21:29:52.8914523Z remote: Compressing objects:  66% (85/128)        
+2022-11-11T21:29:52.8924325Z remote: Compressing objects:  67% (86/128)        
+2022-11-11T21:29:52.8924818Z remote: Compressing objects:  68% (88/128)        
+2022-11-11T21:29:52.8925241Z remote: Compressing objects:  69% (89/128)        
+2022-11-11T21:29:52.8925646Z remote: Compressing objects:  70% (90/128)        
+2022-11-11T21:29:52.8926056Z remote: Compressing objects:  71% (91/128)        
+2022-11-11T21:29:52.8926466Z remote: Compressing objects:  72% (93/128)        
+2022-11-11T21:29:52.8926885Z remote: Compressing objects:  73% (94/128)        
+2022-11-11T21:29:52.8927282Z remote: Compressing objects:  74% (95/128)        
+2022-11-11T21:29:52.8927682Z remote: Compressing objects:  75% (96/128)        
+2022-11-11T21:29:52.8928086Z remote: Compressing objects:  76% (98/128)        
+2022-11-11T21:29:52.8928490Z remote: Compressing objects:  77% (99/128)        
+2022-11-11T21:29:52.8928884Z remote: Compressing objects:  78% (100/128)        
+2022-11-11T21:29:52.8929294Z remote: Compressing objects:  79% (102/128)        
+2022-11-11T21:29:52.8929713Z remote: Compressing objects:  80% (103/128)        
+2022-11-11T21:29:52.8930033Z remote: Compressing objects:  81% (104/128)        
+2022-11-11T21:29:52.8930336Z remote: Compressing objects:  82% (105/128)        
+2022-11-11T21:29:52.8930778Z remote: Compressing objects:  83% (107/128)        
+2022-11-11T21:29:52.8931192Z remote: Compressing objects:  84% (108/128)        
+2022-11-11T21:29:52.8931849Z remote: Compressing objects:  85% (109/128)        
+2022-11-11T21:29:52.8932262Z remote: Compressing objects:  86% (111/128)        
+2022-11-11T21:29:52.8932669Z remote: Compressing objects:  87% (112/128)        
+2022-11-11T21:29:52.8933078Z remote: Compressing objects:  88% (113/128)        
+2022-11-11T21:29:52.8933471Z remote: Compressing objects:  89% (114/128)        
+2022-11-11T21:29:52.8933921Z remote: Compressing objects:  90% (116/128)        
+2022-11-11T21:29:52.8934314Z remote: Compressing objects:  91% (117/128)        
+2022-11-11T21:29:52.8934903Z remote: Compressing objects:  92% (118/128)        
+2022-11-11T21:29:52.8935352Z remote: Compressing objects:  93% (120/128)        
+2022-11-11T21:29:52.8935763Z remote: Compressing objects:  94% (121/128)        
+2022-11-11T21:29:52.8936154Z remote: Compressing objects:  95% (122/128)        
+2022-11-11T21:29:52.8936562Z remote: Compressing objects:  96% (123/128)        
+2022-11-11T21:29:52.8936968Z remote: Compressing objects:  97% (125/128)        
+2022-11-11T21:29:52.8937384Z remote: Compressing objects:  98% (126/128)        
+2022-11-11T21:29:52.8937778Z remote: Compressing objects:  99% (127/128)        
+2022-11-11T21:29:52.8938461Z remote: Compressing objects: 100% (128/128)        
+2022-11-11T21:29:52.8938890Z remote: Compressing objects: 100% (128/128), done.        
+2022-11-11T21:29:52.9301846Z Receiving objects:   0% (1/22569)
+2022-11-11T21:29:52.9479203Z Receiving objects:   1% (226/22569)
+2022-11-11T21:29:52.9517711Z Receiving objects:   2% (452/22569)
+2022-11-11T21:29:52.9670911Z Receiving objects:   3% (678/22569)
+2022-11-11T21:29:52.9711173Z Receiving objects:   4% (903/22569)
+2022-11-11T21:29:52.9744689Z Receiving objects:   5% (1129/22569)
+2022-11-11T21:29:52.9784125Z Receiving objects:   6% (1355/22569)
+2022-11-11T21:29:52.9860822Z Receiving objects:   7% (1580/22569)
+2022-11-11T21:29:52.9902118Z Receiving objects:   8% (1806/22569)
+2022-11-11T21:29:52.9959231Z Receiving objects:   9% (2032/22569)
+2022-11-11T21:29:52.9959680Z Receiving objects:  10% (2257/22569)
+2022-11-11T21:29:52.9997668Z Receiving objects:  11% (2483/22569)
+2022-11-11T21:29:53.0030358Z Receiving objects:  12% (2709/22569)
+2022-11-11T21:29:53.0064062Z Receiving objects:  13% (2934/22569)
+2022-11-11T21:29:53.0090319Z Receiving objects:  14% (3160/22569)
+2022-11-11T21:29:53.0112516Z Receiving objects:  15% (3386/22569)
+2022-11-11T21:29:53.0135162Z Receiving objects:  16% (3612/22569)
+2022-11-11T21:29:53.0156366Z Receiving objects:  17% (3837/22569)
+2022-11-11T21:29:53.0236161Z Receiving objects:  18% (4063/22569)
+2022-11-11T21:29:53.0486861Z Receiving objects:  19% (4289/22569)
+2022-11-11T21:29:53.0729828Z Receiving objects:  20% (4514/22569)
+2022-11-11T21:29:53.0902490Z Receiving objects:  21% (4740/22569)
+2022-11-11T21:29:53.1215901Z Receiving objects:  22% (4966/22569)
+2022-11-11T21:29:53.1382266Z Receiving objects:  23% (5191/22569)
+2022-11-11T21:29:53.1471302Z Receiving objects:  24% (5417/22569)
+2022-11-11T21:29:53.1665088Z Receiving objects:  25% (5643/22569)
+2022-11-11T21:29:53.1764134Z Receiving objects:  26% (5868/22569)
+2022-11-11T21:29:53.1813310Z Receiving objects:  27% (6094/22569)
+2022-11-11T21:29:53.1898534Z Receiving objects:  28% (6320/22569)
+2022-11-11T21:29:53.1973185Z Receiving objects:  29% (6546/22569)
+2022-11-11T21:29:53.2074743Z Receiving objects:  30% (6771/22569)
+2022-11-11T21:29:53.2141511Z Receiving objects:  31% (6997/22569)
+2022-11-11T21:29:53.2236542Z Receiving objects:  32% (7223/22569)
+2022-11-11T21:29:53.2548907Z Receiving objects:  33% (7448/22569)
+2022-11-11T21:29:53.3256193Z Receiving objects:  34% (7674/22569)
+2022-11-11T21:29:53.3539541Z Receiving objects:  35% (7900/22569)
+2022-11-11T21:29:53.3773466Z Receiving objects:  36% (8125/22569)
+2022-11-11T21:29:53.3869072Z Receiving objects:  37% (8351/22569)
+2022-11-11T21:29:53.4125319Z Receiving objects:  38% (8577/22569)
+2022-11-11T21:29:53.4269534Z Receiving objects:  39% (8802/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.4774514Z Receiving objects:  40% (9028/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5228466Z Receiving objects:  41% (9254/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5499607Z Receiving objects:  42% (9479/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5554877Z Receiving objects:  43% (9705/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5584205Z Receiving objects:  44% (9931/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5730351Z Receiving objects:  45% (10157/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5769826Z Receiving objects:  46% (10382/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5895388Z Receiving objects:  47% (10608/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.5992390Z Receiving objects:  48% (10834/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6011578Z Receiving objects:  49% (11059/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6065677Z Receiving objects:  50% (11285/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6259897Z Receiving objects:  51% (11511/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6319113Z Receiving objects:  52% (11736/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6371804Z Receiving objects:  53% (11962/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6470285Z Receiving objects:  54% (12188/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6602923Z Receiving objects:  55% (12413/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6675972Z Receiving objects:  56% (12639/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6686734Z Receiving objects:  57% (12865/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6696394Z Receiving objects:  58% (13091/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6703328Z Receiving objects:  59% (13316/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6716227Z Receiving objects:  60% (13542/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6727671Z Receiving objects:  61% (13768/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6750207Z Receiving objects:  62% (13993/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6777409Z Receiving objects:  63% (14219/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6806531Z Receiving objects:  64% (14445/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6809385Z Receiving objects:  65% (14670/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6835069Z Receiving objects:  66% (14896/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6835733Z Receiving objects:  67% (15122/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6856953Z Receiving objects:  68% (15347/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6903014Z Receiving objects:  69% (15573/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6945045Z Receiving objects:  70% (15799/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6955702Z Receiving objects:  71% (16024/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.6974539Z Receiving objects:  72% (16250/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7045917Z Receiving objects:  73% (16476/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7072511Z Receiving objects:  74% (16702/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7080502Z Receiving objects:  75% (16927/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7100211Z Receiving objects:  76% (17153/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7126462Z Receiving objects:  77% (17379/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7145075Z Receiving objects:  78% (17604/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7191308Z Receiving objects:  79% (17830/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7243585Z Receiving objects:  80% (18056/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7278971Z Receiving objects:  81% (18281/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7284573Z Receiving objects:  82% (18507/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7289709Z Receiving objects:  83% (18733/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7295855Z Receiving objects:  84% (18958/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7302182Z Receiving objects:  85% (19184/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7306525Z Receiving objects:  86% (19410/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7312483Z Receiving objects:  87% (19636/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7318192Z Receiving objects:  88% (19861/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7327247Z Receiving objects:  89% (20087/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7334232Z Receiving objects:  90% (20313/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7338011Z Receiving objects:  91% (20538/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7343815Z Receiving objects:  92% (20764/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7399131Z Receiving objects:  93% (20990/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7568049Z Receiving objects:  94% (21215/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7578753Z Receiving objects:  95% (21441/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7632358Z Receiving objects:  96% (21667/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7745630Z Receiving objects:  97% (21892/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.7924141Z Receiving objects:  98% (22118/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.8376373Z Receiving objects:  99% (22344/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.8377552Z remote: Total 22569 (delta 146), reused 210 (delta 120), pack-reused 22316        
+2022-11-11T21:29:53.8401058Z Receiving objects: 100% (22569/22569), 11.12 MiB | 22.24 MiB/s
+2022-11-11T21:29:53.8401772Z Receiving objects: 100% (22569/22569), 23.33 MiB | 24.67 MiB/s, done.
+2022-11-11T21:29:53.8459848Z Resolving deltas:   0% (0/14943)
+2022-11-11T21:29:53.8473953Z Resolving deltas:   1% (150/14943)
+2022-11-11T21:29:53.8500973Z Resolving deltas:   2% (299/14943)
+2022-11-11T21:29:53.8516214Z Resolving deltas:   3% (449/14943)
+2022-11-11T21:29:53.8543780Z Resolving deltas:   4% (599/14943)
+2022-11-11T21:29:53.8682703Z Resolving deltas:   5% (748/14943)
+2022-11-11T21:29:53.8740528Z Resolving deltas:   6% (897/14943)
+2022-11-11T21:29:53.8823738Z Resolving deltas:   7% (1047/14943)
+2022-11-11T21:29:53.8907070Z Resolving deltas:   8% (1196/14943)
+2022-11-11T21:29:53.9098045Z Resolving deltas:   9% (1345/14943)
+2022-11-11T21:29:53.9580487Z Resolving deltas:  10% (1495/14943)
+2022-11-11T21:29:53.9678104Z Resolving deltas:  11% (1644/14943)
+2022-11-11T21:29:53.9773203Z Resolving deltas:  12% (1794/14943)
+2022-11-11T21:29:53.9829564Z Resolving deltas:  13% (1943/14943)
+2022-11-11T21:29:53.9898320Z Resolving deltas:  14% (2093/14943)
+2022-11-11T21:29:53.9962568Z Resolving deltas:  15% (2242/14943)
+2022-11-11T21:29:54.0263585Z Resolving deltas:  16% (2391/14943)
+2022-11-11T21:29:54.0336693Z Resolving deltas:  17% (2541/14943)
+2022-11-11T21:29:54.0409975Z Resolving deltas:  18% (2690/14943)
+2022-11-11T21:29:54.0779005Z Resolving deltas:  19% (2840/14943)
+2022-11-11T21:29:54.0884844Z Resolving deltas:  20% (2989/14943)
+2022-11-11T21:29:54.1034548Z Resolving deltas:  21% (3139/14943)
+2022-11-11T21:29:54.1154724Z Resolving deltas:  22% (3288/14943)
+2022-11-11T21:29:54.1223406Z Resolving deltas:  23% (3437/14943)
+2022-11-11T21:29:54.1259747Z Resolving deltas:  24% (3587/14943)
+2022-11-11T21:29:54.1339547Z Resolving deltas:  25% (3736/14943)
+2022-11-11T21:29:54.1508715Z Resolving deltas:  26% (3886/14943)
+2022-11-11T21:29:54.1590341Z Resolving deltas:  27% (4035/14943)
+2022-11-11T21:29:54.1622845Z Resolving deltas:  28% (4185/14943)
+2022-11-11T21:29:54.1665722Z Resolving deltas:  29% (4335/14943)
+2022-11-11T21:29:54.1698753Z Resolving deltas:  30% (4483/14943)
+2022-11-11T21:29:54.1724717Z Resolving deltas:  31% (4633/14943)
+2022-11-11T21:29:54.2124656Z Resolving deltas:  32% (4782/14943)
+2022-11-11T21:29:54.2300867Z Resolving deltas:  33% (4932/14943)
+2022-11-11T21:29:54.2581757Z Resolving deltas:  34% (5081/14943)
+2022-11-11T21:29:54.2590103Z Resolving deltas:  35% (5231/14943)
+2022-11-11T21:29:54.2599397Z Resolving deltas:  36% (5380/14943)
+2022-11-11T21:29:54.2647480Z Resolving deltas:  37% (5529/14943)
+2022-11-11T21:29:54.2661957Z Resolving deltas:  38% (5679/14943)
+2022-11-11T21:29:54.2812227Z Resolving deltas:  39% (5828/14943)
+2022-11-11T21:29:54.2999473Z Resolving deltas:  40% (5978/14943)
+2022-11-11T21:29:54.3017681Z Resolving deltas:  41% (6127/14943)
+2022-11-11T21:29:54.3217938Z Resolving deltas:  42% (6277/14943)
+2022-11-11T21:29:54.3300774Z Resolving deltas:  43% (6426/14943)
+2022-11-11T21:29:54.3316174Z Resolving deltas:  44% (6575/14943)
+2022-11-11T21:29:54.3903027Z Resolving deltas:  45% (6725/14943)
+2022-11-11T21:29:54.4276497Z Resolving deltas:  46% (6874/14943)
+2022-11-11T21:29:54.4300955Z Resolving deltas:  47% (7024/14943)
+2022-11-11T21:29:54.4480754Z Resolving deltas:  48% (7173/14943)
+2022-11-11T21:29:54.4669751Z Resolving deltas:  49% (7323/14943)
+2022-11-11T21:29:54.4736230Z Resolving deltas:  50% (7472/14943)
+2022-11-11T21:29:54.4772210Z Resolving deltas:  51% (7621/14943)
+2022-11-11T21:29:54.4792214Z Resolving deltas:  52% (7771/14943)
+2022-11-11T21:29:54.4817591Z Resolving deltas:  53% (7920/14943)
+2022-11-11T21:29:54.4836758Z Resolving deltas:  54% (8070/14943)
+2022-11-11T21:29:54.5052736Z Resolving deltas:  55% (8219/14943)
+2022-11-11T21:29:54.5061888Z Resolving deltas:  56% (8369/14943)
+2022-11-11T21:29:54.5069861Z Resolving deltas:  57% (8518/14943)
+2022-11-11T21:29:54.5086736Z Resolving deltas:  58% (8667/14943)
+2022-11-11T21:29:54.5103924Z Resolving deltas:  59% (8817/14943)
+2022-11-11T21:29:54.5149595Z Resolving deltas:  60% (8966/14943)
+2022-11-11T21:29:54.5158585Z Resolving deltas:  61% (9116/14943)
+2022-11-11T21:29:54.5169581Z Resolving deltas:  62% (9265/14943)
+2022-11-11T21:29:54.5181660Z Resolving deltas:  63% (9415/14943)
+2022-11-11T21:29:54.5219416Z Resolving deltas:  64% (9564/14943)
+2022-11-11T21:29:54.5359261Z Resolving deltas:  65% (9713/14943)
+2022-11-11T21:29:54.5368249Z Resolving deltas:  66% (9863/14943)
+2022-11-11T21:29:54.5455915Z Resolving deltas:  67% (10012/14943)
+2022-11-11T21:29:54.5619681Z Resolving deltas:  68% (10162/14943)
+2022-11-11T21:29:54.5786023Z Resolving deltas:  69% (10311/14943)
+2022-11-11T21:29:54.5800203Z Resolving deltas:  70% (10461/14943)
+2022-11-11T21:29:54.5818306Z Resolving deltas:  71% (10611/14943)
+2022-11-11T21:29:54.5825321Z Resolving deltas:  72% (10759/14943)
+2022-11-11T21:29:54.5833813Z Resolving deltas:  73% (10909/14943)
+2022-11-11T21:29:54.5845706Z Resolving deltas:  74% (11058/14943)
+2022-11-11T21:29:54.5855354Z Resolving deltas:  75% (11208/14943)
+2022-11-11T21:29:54.5864437Z Resolving deltas:  76% (11357/14943)
+2022-11-11T21:29:54.5872347Z Resolving deltas:  77% (11507/14943)
+2022-11-11T21:29:54.5879816Z Resolving deltas:  78% (11656/14943)
+2022-11-11T21:29:54.5975333Z Resolving deltas:  79% (11805/14943)
+2022-11-11T21:29:54.5988928Z Resolving deltas:  80% (11955/14943)
+2022-11-11T21:29:54.6018523Z Resolving deltas:  81% (12104/14943)
+2022-11-11T21:29:54.6210625Z Resolving deltas:  82% (12254/14943)
+2022-11-11T21:29:54.6224795Z Resolving deltas:  83% (12403/14943)
+2022-11-11T21:29:54.6232421Z Resolving deltas:  84% (12553/14943)
+2022-11-11T21:29:54.6248662Z Resolving deltas:  85% (12702/14943)
+2022-11-11T21:29:54.6257626Z Resolving deltas:  86% (12851/14943)
+2022-11-11T21:29:54.6264850Z Resolving deltas:  87% (13001/14943)
+2022-11-11T21:29:54.6291391Z Resolving deltas:  88% (13150/14943)
+2022-11-11T21:29:54.6300637Z Resolving deltas:  89% (13300/14943)
+2022-11-11T21:29:54.6412093Z Resolving deltas:  90% (13449/14943)
+2022-11-11T21:29:54.6425284Z Resolving deltas:  91% (13599/14943)
+2022-11-11T21:29:54.6437767Z Resolving deltas:  92% (13748/14943)
+2022-11-11T21:29:54.6450381Z Resolving deltas:  93% (13897/14943)
+2022-11-11T21:29:54.6489288Z Resolving deltas:  94% (14047/14943)
+2022-11-11T21:29:54.6501464Z Resolving deltas:  95% (14196/14943)
+2022-11-11T21:29:54.6511420Z Resolving deltas:  96% (14346/14943)
+2022-11-11T21:29:54.6522746Z Resolving deltas:  97% (14495/14943)
+2022-11-11T21:29:54.6578472Z Resolving deltas:  98% (14645/14943)
+2022-11-11T21:29:54.6778992Z Resolving deltas:  99% (14794/14943)
+2022-11-11T21:29:54.6815646Z Resolving deltas: 100% (14943/14943)
+2022-11-11T21:29:54.6815953Z Resolving deltas: 100% (14943/14943), done.
+2022-11-11T21:29:54.7999589Z From https://github.com/dotnet/core
+2022-11-11T21:29:54.8002483Z  * [new branch]        fedora-35          -> origin/fedora-35
+2022-11-11T21:29:54.8055946Z  * [new branch]        main               -> origin/main
+2022-11-11T21:29:54.8056896Z  * [new branch]        nagilson-preview-sdk-manifests -> origin/nagilson-preview-sdk-manifests
+2022-11-11T21:29:54.8057750Z  * [new branch]        net6-supported-os  -> origin/net6-supported-os
+2022-11-11T21:29:54.8058640Z  * [new branch]        policies           -> origin/policies
+2022-11-11T21:29:54.8059157Z  * [new branch]        rbhanda-patch-1    -> origin/rbhanda-patch-1
+2022-11-11T21:29:54.8059634Z  * [new branch]        rbhanda-patch-2    -> origin/rbhanda-patch-2
+2022-11-11T21:29:54.8060171Z  * [new branch]        richlander-patch-1 -> origin/richlander-patch-1
+2022-11-11T21:29:54.8060867Z  * [new branch]        thaystg-patch-1    -> origin/thaystg-patch-1
+2022-11-11T21:29:54.8061327Z  * [new branch]        update             -> origin/update
+2022-11-11T21:29:54.8061749Z  * [new tag]           v1.0.0             -> v1.0.0
+2022-11-11T21:29:54.8062135Z  * [new tag]           v1.0.0-rc1         -> v1.0.0-rc1
+2022-11-11T21:29:54.8062519Z  * [new tag]           v1.0.0-rc2         -> v1.0.0-rc2
+2022-11-11T21:29:54.8062874Z  * [new tag]           v1.0.1             -> v1.0.1
+2022-11-11T21:29:54.8063242Z  * [new tag]           v1.0.10            -> v1.0.10
+2022-11-11T21:29:54.8063610Z  * [new tag]           v1.0.11            -> v1.0.11
+2022-11-11T21:29:54.8064199Z  * [new tag]           v1.0.12            -> v1.0.12
+2022-11-11T21:29:54.8064603Z  * [new tag]           v1.0.13            -> v1.0.13
+2022-11-11T21:29:54.8064965Z  * [new tag]           v1.0.14            -> v1.0.14
+2022-11-11T21:29:54.8065330Z  * [new tag]           v1.0.15            -> v1.0.15
+2022-11-11T21:29:54.8065675Z  * [new tag]           v1.0.16            -> v1.0.16
+2022-11-11T21:29:54.8066041Z  * [new tag]           v1.0.2             -> v1.0.2
+2022-11-11T21:29:54.8066405Z  * [new tag]           v1.0.3             -> v1.0.3
+2022-11-11T21:29:54.8066766Z  * [new tag]           v1.0.4             -> v1.0.4
+2022-11-11T21:29:54.8067123Z  * [new tag]           v1.0.5             -> v1.0.5
+2022-11-11T21:29:54.8067476Z  * [new tag]           v1.0.7             -> v1.0.7
+2022-11-11T21:29:54.8067827Z  * [new tag]           v1.0.8             -> v1.0.8
+2022-11-11T21:29:54.8068164Z  * [new tag]           v1.0.9             -> v1.0.9
+2022-11-11T21:29:54.8068526Z  * [new tag]           v1.1               -> v1.1
+2022-11-11T21:29:54.8068880Z  * [new tag]           v1.1.0             -> v1.1.0
+2022-11-11T21:29:54.8072415Z  * [new tag]           v1.1.0-preview1    -> v1.1.0-preview1
+2022-11-11T21:29:54.8075607Z  * [new tag]           v1.1.1             -> v1.1.1
+2022-11-11T21:29:54.8078581Z  * [new tag]           v1.1.10            -> v1.1.10
+2022-11-11T21:29:54.8081551Z  * [new tag]           v1.1.11            -> v1.1.11
+2022-11-11T21:29:54.8084492Z  * [new tag]           v1.1.12            -> v1.1.12
+2022-11-11T21:29:54.8087420Z  * [new tag]           v1.1.13            -> v1.1.13
+2022-11-11T21:29:54.8090396Z  * [new tag]           v1.1.2             -> v1.1.2
+2022-11-11T21:29:54.8093262Z  * [new tag]           v1.1.4             -> v1.1.4
+2022-11-11T21:29:54.8096880Z  * [new tag]           v1.1.5             -> v1.1.5
+2022-11-11T21:29:54.8099906Z  * [new tag]           v1.1.6             -> v1.1.6
+2022-11-11T21:29:54.8103778Z  * [new tag]           v1.1.7             -> v1.1.7
+2022-11-11T21:29:54.8106700Z  * [new tag]           v1.1.8             -> v1.1.8
+2022-11-11T21:29:54.8109732Z  * [new tag]           v1.1.9             -> v1.1.9
+2022-11-11T21:29:54.8112901Z  * [new tag]           v2.0.0             -> v2.0.0
+2022-11-11T21:29:54.8116264Z  * [new tag]           v2.0.0-preview1    -> v2.0.0-preview1
+2022-11-11T21:29:54.8119390Z  * [new tag]           v2.0.0-preview2    -> v2.0.0-preview2
+2022-11-11T21:29:54.8122638Z  * [new tag]           v2.0.3             -> v2.0.3
+2022-11-11T21:29:54.8125802Z  * [new tag]           v2.0.4             -> v2.0.4
+2022-11-11T21:29:54.8129114Z  * [new tag]           v2.0.5             -> v2.0.5
+2022-11-11T21:29:54.8131965Z  * [new tag]           v2.0.6             -> v2.0.6
+2022-11-11T21:29:54.8135164Z  * [new tag]           v2.0.7             -> v2.0.7
+2022-11-11T21:29:54.8138474Z  * [new tag]           v2.0.7-2           -> v2.0.7-2
+2022-11-11T21:29:54.8141457Z  * [new tag]           v2.0.9             -> v2.0.9
+2022-11-11T21:29:54.8144630Z  * [new tag]           v2.1-preview1      -> v2.1-preview1
+2022-11-11T21:29:54.8147950Z  * [new tag]           v2.1-preview2      -> v2.1-preview2
+2022-11-11T21:29:54.8152626Z  * [new tag]           v2.1-rc1           -> v2.1-rc1
+2022-11-11T21:29:54.8155867Z  * [new tag]           v2.1.0             -> v2.1.0
+2022-11-11T21:29:54.8159067Z  * [new tag]           v2.1.1             -> v2.1.1
+2022-11-11T21:29:54.8162055Z  * [new tag]           v2.1.11            -> v2.1.11
+2022-11-11T21:29:54.8165272Z  * [new tag]           v2.1.12            -> v2.1.12
+2022-11-11T21:29:54.8168538Z  * [new tag]           v2.1.13            -> v2.1.13
+2022-11-11T21:29:54.8171827Z  * [new tag]           v2.1.14            -> v2.1.14
+2022-11-11T21:29:54.8175814Z  * [new tag]           v2.1.15            -> v2.1.15
+2022-11-11T21:29:54.8179166Z  * [new tag]           v2.1.16            -> v2.1.16
+2022-11-11T21:29:54.8182454Z  * [new tag]           v2.1.18            -> v2.1.18
+2022-11-11T21:29:54.8185551Z  * [new tag]           v2.1.2             -> v2.1.2
+2022-11-11T21:29:54.8188868Z  * [new tag]           v2.1.20            -> v2.1.20
+2022-11-11T21:29:54.8192170Z  * [new tag]           v2.1.22            -> v2.1.22
+2022-11-11T21:29:54.8195757Z  * [new tag]           v2.1.23            -> v2.1.23
+2022-11-11T21:29:54.8199228Z  * [new tag]           v2.1.24            -> v2.1.24
+2022-11-11T21:29:54.8202403Z  * [new tag]           v2.1.25            -> v2.1.25
+2022-11-11T21:29:54.8205608Z  * [new tag]           v2.1.29            -> v2.1.29
+2022-11-11T21:29:54.8208871Z  * [new tag]           v2.1.3             -> v2.1.3
+2022-11-11T21:29:54.8212121Z  * [new tag]           v2.1.30            -> v2.1.30
+2022-11-11T21:29:54.8215563Z  * [new tag]           v2.1.4             -> v2.1.4
+2022-11-11T21:29:54.8218923Z  * [new tag]           v2.1.5             -> v2.1.5
+2022-11-11T21:29:54.8222194Z  * [new tag]           v2.1.6             -> v2.1.6
+2022-11-11T21:29:54.8225378Z  * [new tag]           v2.1.7             -> v2.1.7
+2022-11-11T21:29:54.8228263Z  * [new tag]           v2.1.8             -> v2.1.8
+2022-11-11T21:29:54.8231182Z  * [new tag]           v2.1.9             -> v2.1.9
+2022-11-11T21:29:54.8234413Z  * [new tag]           v2.2.0             -> v2.2.0
+2022-11-11T21:29:54.8237469Z  * [new tag]           v2.2.0-preview1    -> v2.2.0-preview1
+2022-11-11T21:29:54.8240806Z  * [new tag]           v2.2.0-preview2    -> v2.2.0-preview2
+2022-11-11T21:29:54.8244064Z  * [new tag]           v2.2.0-preview3    -> v2.2.0-preview3
+2022-11-11T21:29:54.8247052Z  * [new tag]           v2.2.1             -> v2.2.1
+2022-11-11T21:29:54.8250331Z  * [new tag]           v2.2.2             -> v2.2.2
+2022-11-11T21:29:54.8253249Z  * [new tag]           v2.2.3             -> v2.2.3
+2022-11-11T21:29:54.8256640Z  * [new tag]           v2.2.5             -> v2.2.5
+2022-11-11T21:29:54.8259553Z  * [new tag]           v2.2.6             -> v2.2.6
+2022-11-11T21:29:54.8262610Z  * [new tag]           v2.2.7             -> v2.2.7
+2022-11-11T21:29:54.8265470Z  * [new tag]           v2.2.8             -> v2.2.8
+2022-11-11T21:29:54.8268700Z  * [new tag]           v3.0.0             -> v3.0.0
+2022-11-11T21:29:54.8271944Z  * [new tag]           v3.0.0-preview1    -> v3.0.0-preview1
+2022-11-11T21:29:54.8275293Z  * [new tag]           v3.0.0-preview2    -> v3.0.0-preview2
+2022-11-11T21:29:54.8278554Z  * [new tag]           v3.0.0-preview3    -> v3.0.0-preview3
+2022-11-11T21:29:54.8282010Z  * [new tag]           v3.0.0-preview4    -> v3.0.0-preview4
+2022-11-11T21:29:54.8285243Z  * [new tag]           v3.0.0-preview5    -> v3.0.0-preview5
+2022-11-11T21:29:54.8288579Z  * [new tag]           v3.0.0-preview6    -> v3.0.0-preview6
+2022-11-11T21:29:54.8291962Z  * [new tag]           v3.0.0-preview7    -> v3.0.0-preview7
+2022-11-11T21:29:54.8295532Z  * [new tag]           v3.0.0-preview8    -> v3.0.0-preview8
+2022-11-11T21:29:54.8299418Z  * [new tag]           v3.0.0-preview9    -> v3.0.0-preview9
+2022-11-11T21:29:54.8302737Z  * [new tag]           v3.0.0-rc1         -> v3.0.0-rc1
+2022-11-11T21:29:54.8305675Z  * [new tag]           v3.0.1             -> v3.0.1
+2022-11-11T21:29:54.8309835Z  * [new tag]           v3.0.2             -> v3.0.2
+2022-11-11T21:29:54.8314025Z  * [new tag]           v3.0.3             -> v3.0.3
+2022-11-11T21:29:54.8314420Z  * [new tag]           v3.1.0             -> v3.1.0
+2022-11-11T21:29:54.8317674Z  * [new tag]           v3.1.0-preview1    -> v3.1.0-preview1
+2022-11-11T21:29:54.8321030Z  * [new tag]           v3.1.0-preview2    -> v3.1.0-preview2
+2022-11-11T21:29:54.8321473Z  * [new tag]           v3.1.0-preview3    -> v3.1.0-preview3
+2022-11-11T21:29:54.8324806Z  * [new tag]           v3.1.1             -> v3.1.1
+2022-11-11T21:29:54.8325210Z  * [new tag]           v3.1.10            -> v3.1.10
+2022-11-11T21:29:54.8328470Z  * [new tag]           v3.1.11            -> v3.1.11
+2022-11-11T21:29:54.8328854Z  * [new tag]           v3.1.12            -> v3.1.12
+2022-11-11T21:29:54.8332198Z  * [new tag]           v3.1.13            -> v3.1.13
+2022-11-11T21:29:54.8332808Z  * [new tag]           v3.1.14            -> v3.1.14
+2022-11-11T21:29:54.8336441Z  * [new tag]           v3.1.15            -> v3.1.15
+2022-11-11T21:29:54.8336806Z  * [new tag]           v3.1.16            -> v3.1.16
+2022-11-11T21:29:54.8340161Z  * [new tag]           v3.1.17            -> v3.1.17
+2022-11-11T21:29:54.8340541Z  * [new tag]           v3.1.18            -> v3.1.18
+2022-11-11T21:29:54.8343800Z  * [new tag]           v3.1.19            -> v3.1.19
+2022-11-11T21:29:54.8344175Z  * [new tag]           v3.1.2             -> v3.1.2
+2022-11-11T21:29:54.8347509Z  * [new tag]           v3.1.20            -> v3.1.20
+2022-11-11T21:29:54.8347898Z  * [new tag]           v3.1.200           -> v3.1.200
+2022-11-11T21:29:54.8351121Z  * [new tag]           v3.1.201           -> v3.1.201
+2022-11-11T21:29:54.8351519Z  * [new tag]           v3.1.21            -> v3.1.21
+2022-11-11T21:29:54.8354324Z  * [new tag]           v3.1.22            -> v3.1.22
+2022-11-11T21:29:54.8356695Z  * [new tag]           v3.1.23            -> v3.1.23
+2022-11-11T21:29:54.8359009Z  * [new tag]           v3.1.24            -> v3.1.24
+2022-11-11T21:29:54.8361365Z  * [new tag]           v3.1.25            -> v3.1.25
+2022-11-11T21:29:54.8363693Z  * [new tag]           v3.1.26            -> v3.1.26
+2022-11-11T21:29:54.8366005Z  * [new tag]           v3.1.27            -> v3.1.27
+2022-11-11T21:29:54.8368336Z  * [new tag]           v3.1.28            -> v3.1.28
+2022-11-11T21:29:54.8370801Z  * [new tag]           v3.1.29            -> v3.1.29
+2022-11-11T21:29:54.8371175Z  * [new tag]           v3.1.3             -> v3.1.3
+2022-11-11T21:29:54.8373921Z  * [new tag]           v3.1.30            -> v3.1.30
+2022-11-11T21:29:54.8376475Z  * [new tag]           v3.1.31            -> v3.1.31
+2022-11-11T21:29:54.8378808Z  * [new tag]           v3.1.5             -> v3.1.5
+2022-11-11T21:29:54.8381038Z  * [new tag]           v3.1.6             -> v3.1.6
+2022-11-11T21:29:54.8383314Z  * [new tag]           v3.1.7             -> v3.1.7
+2022-11-11T21:29:54.8385552Z  * [new tag]           v3.1.8             -> v3.1.8
+2022-11-11T21:29:54.8387854Z  * [new tag]           v3.1.9             -> v3.1.9
+2022-11-11T21:29:54.8390076Z  * [new tag]           v5.0.0             -> v5.0.0
+2022-11-11T21:29:54.8392418Z  * [new tag]           v5.0.0-preview.2   -> v5.0.0-preview.2
+2022-11-11T21:29:54.8394724Z  * [new tag]           v5.0.0-preview.3   -> v5.0.0-preview.3
+2022-11-11T21:29:54.8398013Z  * [new tag]           v5.0.0-preview.4   -> v5.0.0-preview.4
+2022-11-11T21:29:54.8398457Z  * [new tag]           v5.0.0-preview.5   -> v5.0.0-preview.5
+2022-11-11T21:29:54.8400833Z  * [new tag]           v5.0.0-preview.6   -> v5.0.0-preview.6
+2022-11-11T21:29:54.8403254Z  * [new tag]           v5.0.0-preview.7   -> v5.0.0-preview.7
+2022-11-11T21:29:54.8405560Z  * [new tag]           v5.0.0-preview.8   -> v5.0.0-preview.8
+2022-11-11T21:29:54.8407898Z  * [new tag]           v5.0.0-rc.1        -> v5.0.0-rc.1
+2022-11-11T21:29:54.8410178Z  * [new tag]           v5.0.0-rc.2        -> v5.0.0-rc.2
+2022-11-11T21:29:54.8412648Z  * [new tag]           v5.0.1             -> v5.0.1
+2022-11-11T21:29:54.8413038Z  * [new tag]           v5.0.10            -> v5.0.10
+2022-11-11T21:29:54.8415468Z  * [new tag]           v5.0.11            -> v5.0.11
+2022-11-11T21:29:54.8417827Z  * [new tag]           v5.0.12            -> v5.0.12
+2022-11-11T21:29:54.8420071Z  * [new tag]           v5.0.13            -> v5.0.13
+2022-11-11T21:29:54.8422378Z  * [new tag]           v5.0.14            -> v5.0.14
+2022-11-11T21:29:54.8424638Z  * [new tag]           v5.0.15            -> v5.0.15
+2022-11-11T21:29:54.8426977Z  * [new tag]           v5.0.16            -> v5.0.16
+2022-11-11T21:29:54.8429354Z  * [new tag]           v5.0.17            -> v5.0.17
+2022-11-11T21:29:54.8429733Z  * [new tag]           v5.0.2             -> v5.0.2
+2022-11-11T21:29:54.8432032Z  * [new tag]           v5.0.3             -> v5.0.3
+2022-11-11T21:29:54.8434277Z  * [new tag]           v5.0.4             -> v5.0.4
+2022-11-11T21:29:54.8436807Z  * [new tag]           v5.0.5             -> v5.0.5
+2022-11-11T21:29:54.8439208Z  * [new tag]           v5.0.6             -> v5.0.6
+2022-11-11T21:29:54.8439595Z  * [new tag]           v5.0.7             -> v5.0.7
+2022-11-11T21:29:54.8441978Z  * [new tag]           v5.0.8             -> v5.0.8
+2022-11-11T21:29:54.8444202Z  * [new tag]           v5.0.9             -> v5.0.9
+2022-11-11T21:29:54.8446580Z  * [new tag]           v6.0.0             -> v6.0.0
+2022-11-11T21:29:54.8448945Z  * [new tag]           v6.0.0-preview.1   -> v6.0.0-preview.1
+2022-11-11T21:29:54.8451312Z  * [new tag]           v6.0.0-preview.2   -> v6.0.0-preview.2
+2022-11-11T21:29:54.8453597Z  * [new tag]           v6.0.0-preview.3   -> v6.0.0-preview.3
+2022-11-11T21:29:54.8456206Z  * [new tag]           v6.0.0-preview.4   -> v6.0.0-preview.4
+2022-11-11T21:29:54.8458534Z  * [new tag]           v6.0.0-preview.5   -> v6.0.0-preview.5
+2022-11-11T21:29:54.8461003Z  * [new tag]           v6.0.0-preview.6   -> v6.0.0-preview.6
+2022-11-11T21:29:54.8463511Z  * [new tag]           v6.0.0-preview.7   -> v6.0.0-preview.7
+2022-11-11T21:29:54.8463920Z  * [new tag]           v6.0.0-rc.1        -> v6.0.0-rc.1
+2022-11-11T21:29:54.8466331Z  * [new tag]           v6.0.0-rc.2        -> v6.0.0-rc.2
+2022-11-11T21:29:54.8468584Z  * [new tag]           v6.0.1             -> v6.0.1
+2022-11-11T21:29:54.8470875Z  * [new tag]           v6.0.10            -> v6.0.10
+2022-11-11T21:29:54.8481373Z  * [new tag]           v6.0.11            -> v6.0.11
+2022-11-11T21:29:54.8481778Z  * [new tag]           v6.0.2             -> v6.0.2
+2022-11-11T21:29:54.8488354Z  * [new tag]           v6.0.3             -> v6.0.3
+2022-11-11T21:29:54.8488715Z  * [new tag]           v6.0.4             -> v6.0.4
+2022-11-11T21:29:54.8489075Z  * [new tag]           v6.0.5             -> v6.0.5
+2022-11-11T21:29:54.8495669Z  * [new tag]           v6.0.6             -> v6.0.6
+2022-11-11T21:29:54.8496030Z  * [new tag]           v6.0.7             -> v6.0.7
+2022-11-11T21:29:54.8496385Z  * [new tag]           v6.0.8             -> v6.0.8
+2022-11-11T21:29:54.8496745Z  * [new tag]           v6.0.9             -> v6.0.9
+2022-11-11T21:29:54.8497444Z  * [new tag]           v7.0.0             -> v7.0.0
+2022-11-11T21:29:54.8503273Z  * [new tag]           v7.0.0-preview.1   -> v7.0.0-preview.1
+2022-11-11T21:29:54.8503720Z  * [new tag]           v7.0.0-preview.2   -> v7.0.0-preview.2
+2022-11-11T21:29:54.8504137Z  * [new tag]           v7.0.0-preview.3   -> v7.0.0-preview.3
+2022-11-11T21:29:54.8504796Z  * [new tag]           v7.0.0-preview.4   -> v7.0.0-preview.4
+2022-11-11T21:29:54.8505217Z  * [new tag]           v7.0.0-preview.5   -> v7.0.0-preview.5
+2022-11-11T21:29:54.8505633Z  * [new tag]           v7.0.0-preview.6   -> v7.0.0-preview.6
+2022-11-11T21:29:54.8512117Z  * [new tag]           v7.0.0-preview.7   -> v7.0.0-preview.7
+2022-11-11T21:29:54.8512530Z  * [new tag]           v7.0.0-rc.1        -> v7.0.0-rc.1
+2022-11-11T21:29:54.8512920Z  * [new tag]           v7.0.0-rc.2        -> v7.0.0-rc.2
+2022-11-11T21:29:54.8513407Z  * [new ref]           6f299f820eff03689e1cb3c34e9bfb7c5c9f2973 -> pull/7960/merge
+2022-11-11T21:29:54.8566032Z ##[endgroup]
+2022-11-11T21:29:54.8566899Z ##[group]Determining the checkout info
+2022-11-11T21:29:54.8611835Z ##[endgroup]
+2022-11-11T21:29:54.8612291Z ##[group]Checking out the ref
+2022-11-11T21:29:54.8612968Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/7960/merge
+2022-11-11T21:29:55.1136999Z Note: switching to 'refs/remotes/pull/7960/merge'.
+2022-11-11T21:29:55.1137442Z 
+2022-11-11T21:29:55.1137855Z You are in 'detached HEAD' state. You can look around, make experimental
+2022-11-11T21:29:55.1138385Z changes and commit them, and you can discard any commits you make in this
+2022-11-11T21:29:55.1138890Z state without impacting any branches by switching back to a branch.
+2022-11-11T21:29:55.1139220Z 
+2022-11-11T21:29:55.1139471Z If you want to create a new branch to retain commits you create, you may
+2022-11-11T21:29:55.1140066Z do so (now or later) by using -c with the switch command. Example:
+2022-11-11T21:29:55.1140610Z 
+2022-11-11T21:29:55.1140967Z   git switch -c <new-branch-name>
+2022-11-11T21:29:55.1141243Z 
+2022-11-11T21:29:55.1141440Z Or undo this operation with:
+2022-11-11T21:29:55.1141685Z 
+2022-11-11T21:29:55.1141856Z   git switch -
+2022-11-11T21:29:55.1142062Z 
+2022-11-11T21:29:55.1142348Z Turn off this advice by setting config variable advice.detachedHead to false
+2022-11-11T21:29:55.1142682Z 
+2022-11-11T21:29:55.1143000Z HEAD is now at 6f299f82 Merge 9a577ed7db4492c6892f6433ed275d5f93358822 into e50ca074c56b0618ca0ab20b40a7f26b158cb4ad
+2022-11-11T21:29:55.1169981Z ##[endgroup]
+2022-11-11T21:29:55.1206494Z [command]/usr/bin/git log -1 --format='%H'
+2022-11-11T21:29:55.1242999Z '6f299f820eff03689e1cb3c34e9bfb7c5c9f2973'
+2022-11-11T21:29:55.1703583Z ##[group]Run github/super-linter@v4
+2022-11-11T21:29:55.1703954Z env:
+2022-11-11T21:29:55.1704197Z   VALIDATE_ALL_CODEBASE: false
+2022-11-11T21:29:55.1704455Z   VALIDATE_JSCPD: false
+2022-11-11T21:29:55.1704691Z   VALIDATE_MARKDOWN: false
+2022-11-11T21:29:55.1709210Z   VALIDATE_NATURAL_LANGUAGE: false
+2022-11-11T21:29:55.1709485Z   DEFAULT_BRANCH: main
+2022-11-11T21:29:55.1710018Z   GITHUB_TOKEN: ***
+2022-11-11T21:29:55.1710253Z ##[endgroup]
+2022-11-11T21:29:55.2008301Z ##[command]/usr/bin/docker run --name ghcriogithubsuperlinterv497_0dc6aa --label 290506 --workdir /github/workspace --rm -e "VALIDATE_ALL_CODEBASE" -e "VALIDATE_JSCPD" -e "VALIDATE_MARKDOWN" -e "VALIDATE_NATURAL_LANGUAGE" -e "DEFAULT_BRANCH" -e "GITHUB_TOKEN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/core/core":"/github/workspace" ghcr.io/github/super-linter:v4.9.7
+2022-11-11T21:29:56.1945736Z --------------------------------------------------------------------------------
+2022-11-11T21:29:56.1946063Z 
+2022-11-11T21:29:56.1946193Z                               /@@#///////@@/(@//@%/(@.@(       @@
+2022-11-11T21:29:56.1946730Z                           @@//////////////////////////////#*  @@@
+2022-11-11T21:29:56.1947014Z                         @////@//(///////////@@@@@///@//@/@**//@@(
+2022-11-11T21:29:56.1947399Z                       @///////@///////////////@@@@    (           @,
+2022-11-11T21:29:56.1947902Z                      @/(&/@////////////////////                     @
+2022-11-11T21:29:56.1948316Z                     @////////////////////////@@                      @
+2022-11-11T21:29:56.1948756Z                   @%////////(//////////%/////&@            @@       *,@           ______________
+2022-11-11T21:29:56.1949157Z              @@@@@/@/#/////(&//////////////////                       .@         /              \
+2022-11-11T21:29:56.1949759Z         *@@@@@.    .%///(//@//////////////////&.   .@@,                 @%      / Don't mind me  \
+2022-11-11T21:29:56.1950351Z       @@%           .&@&&/@.@//&/////(//////////    @@@@@@@@@         .. &@    / I'm just looking \
+2022-11-11T21:29:56.1950818Z     @@%               @@@@@   @&/////////////////#   @/       V  @@/ ,@@@ @   <  for some trash... |
+2022-11-11T21:29:56.1951244Z @@@%                   @@@@        .%@@@@//////#@ @   @@         @     .,.     \__________________/
+2022-11-11T21:29:56.1951648Z                                           @@@/@(  (@@@@% @/\      %
+2022-11-11T21:29:56.1952031Z                                            @@@@(    .     .@@/\   #
+2022-11-11T21:29:56.1952385Z                                              @                  %@%
+2022-11-11T21:29:56.1952652Z 
+2022-11-11T21:29:56.1953080Z --------------------------------------------------------------------------------
+2022-11-11T21:29:56.1990011Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   ---------------------------------------------[0m
+2022-11-11T21:29:56.2034751Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   --- GitHub Actions Multi Language Linter ----[0m
+2022-11-11T21:29:56.2078081Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m    - Image Creation Date:[2022-10-04T14:32:49Z][0m
+2022-11-11T21:29:56.2120499Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m    - Image Revision:[d2ce5e28dbb1260a54f9efe463ed65dccc117894][0m
+2022-11-11T21:29:56.2163362Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m    - Image Version:[d2ce5e28dbb1260a54f9efe463ed65dccc117894][0m
+2022-11-11T21:29:56.2208571Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   ---------------------------------------------[0m
+2022-11-11T21:29:56.2250349Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   ---------------------------------------------[0m
+2022-11-11T21:29:56.2293109Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   The Super-Linter source code can be found at:[0m
+2022-11-11T21:29:56.2339201Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m    - https://github.com/github/super-linter[0m
+2022-11-11T21:29:56.2384298Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   ---------------------------------------------[0m
+2022-11-11T21:29:56.2737575Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   --------------------------------------------[0m
+2022-11-11T21:29:56.2776485Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Gathering GitHub information...[0m
+2022-11-11T21:29:56.2820676Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_SHA][0;34m, value:[0;37m[6f299f820eff03689e1cb3c34e9bfb7c5c9f2973][0m
+2022-11-11T21:29:56.2866669Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_WORKSPACE][0;34m, value:[0;37m[/github/workspace][0m
+2022-11-11T21:29:56.2910265Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_EVENT_PATH][0;34m, value:[0;37m[/github/workflow/event.json][0;34m[0m
+2022-11-11T21:29:56.3948116Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_ORG][0;34m, value:[0;37m[dotnet][0m
+2022-11-11T21:29:56.4440662Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_REPO][0;34m, value:[0;37m[core][0m
+2022-11-11T21:29:56.4488223Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_TOKEN][0m
+2022-11-11T21:29:56.4528928Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_REPOSITORY][0;34m, value:[0;37m[dotnet/core][0m
+2022-11-11T21:29:56.4574194Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Successfully found:[0;37m[GITHUB_RUN_ID][0;34m, value:[0;37m[3448080630][0m
+2022-11-11T21:29:56.4617753Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   --------------------------------------------[0m
+2022-11-11T21:29:56.4656180Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   Gathering user validation information...[0m
+2022-11-11T21:29:56.4699822Z [0m2022-11-11 21:29:56 [0;34m[INFO][0m   - Only validating [new], or [edited] files in code base...[0m
+2022-11-11T21:30:03.0127771Z You are not currently on a branch.
+2022-11-11T21:30:03.0128176Z Please specify which branch you want to merge with.
+2022-11-11T21:30:03.0128789Z See git-pull(1) for details.
+2022-11-11T21:30:03.0128946Z 
+2022-11-11T21:30:03.0129058Z     git pull <remote> <branch>
+2022-11-11T21:30:03.0129219Z 
+2022-11-11T21:30:03.3444195Z [0m2022-11-11 21:30:03 [0;34m[INFO][0m   ---------------------------------[0m
+2022-11-11T21:30:03.3490437Z [0m2022-11-11 21:30:03 [0;34m[INFO][0m   ------ File list to check: ------[0m
+2022-11-11T21:30:03.3538741Z [0m2022-11-11 21:30:03 [0;34m[INFO][0m   ---------------------------------[0m
+2022-11-11T21:30:03.4283689Z [0m2022-11-11 21:30:03 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:03.4328832Z [0m2022-11-11 21:30:03 [0;34m[INFO][0m   Successfully gathered list of files...[0m
+2022-11-11T21:30:04.2363622Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   [0m
+2022-11-11T21:30:04.2408964Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:04.2501379Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:04.2596557Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   Linting [GITLEAKS] files...[0m
+2022-11-11T21:30:04.2643273Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:04.2690291Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:04.3019644Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   ---------------------------[0m
+2022-11-11T21:30:04.3073786Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m   File:[/github/workspace/release-notes/7.0/known-issues.md][0m
+2022-11-11T21:30:04.3971081Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m    - File:[0;37m[known-issues.md][0;34m was linted with [0;37m[gitleaks][0;34m successfully[0m
+2022-11-11T21:30:04.4020775Z [0m2022-11-11 21:30:04 [0;34m[INFO][0m      - Command output:[0m
+2022-11-11T21:30:04.4021524Z ------
+2022-11-11T21:30:04.4021687Z 
+2022-11-11T21:30:04.4022571Z     ○
+2022-11-11T21:30:04.4023008Z     │╲
+2022-11-11T21:30:04.4023269Z     │ ○
+2022-11-11T21:30:04.4023589Z     ○ ░
+2022-11-11T21:30:04.4023898Z     ░    gitleaks
+2022-11-11T21:30:04.4024026Z 
+2022-11-11T21:30:04.4024370Z [90m9:30PM[0m [32mINF[0m scan completed in 19.4ms
+2022-11-11T21:30:04.4024822Z [90m9:30PM[0m [32mINF[0m no leaks found
+2022-11-11T21:30:04.4025190Z ------[0m
+2022-11-11T21:30:06.8736567Z [0m2022-11-11 21:30:06 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:06.8781529Z [0m2022-11-11 21:30:06 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:06.8829592Z [0m2022-11-11 21:30:06 [0;34m[INFO][0m   The script has completed[0m
+2022-11-11T21:30:06.8878956Z [0m2022-11-11 21:30:06 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:06.8927537Z [0m2022-11-11 21:30:06 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:07.1552258Z [0m2022-11-11 21:30:07 [0;34m[INFO][0m   ERROR! Failed to call GitHub Status API![0m
+2022-11-11T21:30:07.1601692Z [0m2022-11-11 21:30:07 [0;34m[INFO][0m   ERROR:[curl: (22) The requested URL returned error: 403][0m
+2022-11-11T21:30:07.1698777Z [0m2022-11-11 21:30:07 [0;32m[NOTICE][0m   All file(s) linted successfully with no errors detected[0m
+2022-11-11T21:30:07.1750515Z [0m2022-11-11 21:30:07 [0;34m[INFO][0m   ----------------------------------------------[0m
+2022-11-11T21:30:07.3420580Z Post job cleanup.
+2022-11-11T21:30:07.4982182Z [command]/usr/bin/git version
+2022-11-11T21:30:07.5038998Z git version 2.38.1
+2022-11-11T21:30:07.5092021Z Temporarily overriding HOME='/home/runner/work/_temp/7d1fb51a-5664-484f-b922-7c9350caf1a5' before making global git config changes
+2022-11-11T21:30:07.5092767Z Adding repository directory to the temporary git global config as a safe directory
+2022-11-11T21:30:07.5101416Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/core/core
+2022-11-11T21:30:07.5153277Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-11-11T21:30:07.5194299Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-11-11T21:30:07.5528195Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-11-11T21:30:07.5590228Z http.https://github.com/.extraheader
+2022-11-11T21:30:07.5602357Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-11-11T21:30:07.5649447Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-11-11T21:30:07.6216356Z Cleaning up orphan processes
